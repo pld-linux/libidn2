@@ -1,0 +1,39 @@
+--- libidn2-0.4/doc/libidn2.texi.orig	2011-05-05 17:16:53.000000000 +0200
++++ libidn2-0.4/doc/libidn2.texi	2011-05-17 19:46:41.224646947 +0200
+@@ -15,14 +15,14 @@
+ Copyright @copyright{} 2011 Simon Josefsson
+ @end copying
+ 
+-@dircategory Software libraries
++@dircategory Libraries:
+ @direntry
+-* libidn2: (libidn2).	Internationalized domain names (IDNA2008) processing.
++* libidn2: (libidn2).			Internationalized domain names (IDNA2008) processing
+ @end direntry
+ 
+-@dircategory Localization
++@dircategory Miscellaneous:
+ @direntry
+-* idn2: (libidn2)Invoking idn2.	Internationalized Domain Name (IDNA2008) conversion.
++* idn2: (libidn2)idn2.			Internationalized Domain Name (IDNA2008) conversion
+ @end direntry
+ 
+ @titlepage
+@@ -49,7 +49,7 @@
+ * Introduction::	What is Libidn2?
+ * Library Functions::	Library functions.
+ * Examples::		Demonstrate how to use the library.
+-* Invoking idn2::	Command line interface to the library.
++* idn2::		Command line interface to the library.
+ 
+ * Interface Index::
+ * Concept Index::
+@@ -265,7 +265,7 @@
+ 
+ @verbatiminclude register.c
+ 
+-@node Invoking idn2
++@node idn2
+ @chapter Invoking idn2
+ 
+ @pindex idn2
