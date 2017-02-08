@@ -1,21 +1,21 @@
---- libidn2-0.4/doc/libidn2.texi.orig	2011-05-05 17:16:53.000000000 +0200
-+++ libidn2-0.4/doc/libidn2.texi	2011-05-17 19:46:41.224646947 +0200
+--- libidn2-0.16/doc/libidn2.texi.orig	2017-01-14 16:00:15.000000000 +0100
++++ libidn2-0.16/doc/libidn2.texi	2017-02-08 21:23:02.087171715 +0100
 @@ -15,14 +15,14 @@
- Copyright @copyright{} 2011 Simon Josefsson
+ Copyright @copyright{} 2011-2017 Simon Josefsson
  @end copying
  
 -@dircategory Software libraries
 +@dircategory Libraries:
  @direntry
--* libidn2: (libidn2).	Internationalized domain names (IDNA2008) processing.
-+* libidn2: (libidn2).			Internationalized domain names (IDNA2008) processing
+-* libidn2: (libidn2).	Internationalized domain names (IDNA2008/TR46) processing.
++* libidn2: (libidn2).			Internationalized domain names (IDNA2008/TR46) processing
  @end direntry
  
 -@dircategory Localization
 +@dircategory Miscellaneous:
  @direntry
--* idn2: (libidn2)Invoking idn2.	Internationalized Domain Name (IDNA2008) conversion.
-+* idn2: (libidn2)idn2.			Internationalized Domain Name (IDNA2008) conversion
+-* idn2: (libidn2)Invoking idn2.	Internationalized Domain Name (IDNA2008/TR46) conversion.
++* idn2: (libidn2)idn2.			Internationalized Domain Name (IDNA2008/TR46) conversion
  @end direntry
  
  @titlepage
@@ -28,7 +28,7 @@
  
  * Interface Index::
  * Concept Index::
-@@ -265,7 +265,7 @@
+@@ -308,7 +308,7 @@
  
  @verbatiminclude register.c
  
