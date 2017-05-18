@@ -1,12 +1,12 @@
 Summary:	Free software implementation of IDNA2008
 Summary(pl.UTF-8):	Wolnodostępna implementacja IDNA2008
 Name:		libidn2
-Version:	0.16
+Version:	2.0.2
 Release:	1
 License:	LGPL v3+ or GPL v2+ (library), GPL v3+ (utilities)
 Group:		Libraries
-Source0:	http://alpha.gnu.org/gnu/libidn/%{name}-%{version}.tar.gz
-# Source0-md5:	bc4c2f777016011b613affbd55e2ff83
+Source0:	http://ftp.gnu.org/gnu/libidn/%{name}-%{version}.tar.lz
+# Source0-md5:	5f982b0f6bdea58877e9de9fdd83c18e
 Patch0:		%{name}-info.patch
 URL:		http://www.gnu.org/software/libidn/
 BuildRequires:	autoconf >= 2.61
@@ -15,7 +15,10 @@ BuildRequires:	gettext-tools >= 0.19.3
 BuildRequires:	gtk-doc >= 1.1
 BuildRequires:	help2man
 BuildRequires:	libtool >= 2:2.0
+BuildRequires:	libunistring-devel
+BuildRequires:	lzip
 BuildRequires:	rpmbuild(macros) >= 1.98
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo >= 4.7
 Requires(post,postun):	/sbin/ldconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,6 +37,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libidn2
 License:	LGPL v2.1+
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	libunistring-devel
 
 %description devel
 Header files for libidn2 library.
@@ -61,11 +65,12 @@ Statyczna biblioteka libidn2.
 %build
 %{__gettextize}
 %{__libtoolize}
-%{__aclocal} -I m4
+%{__aclocal} -I m4 -I unistring/m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
 %configure \
+	--disable-silent-rules \
 	--with-html-dir=%{_gtkdocdir}
 
 %{__make}
@@ -89,7 +94,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog NEWS README
+%doc AUTHORS COPYING ChangeLog NEWS README.md
 %attr(755,root,root) %{_bindir}/idn2
 %attr(755,root,root) %{_libdir}/libidn2.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libidn2.so.0
@@ -101,6 +106,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libidn2.so
 %{_libdir}/libidn2.la
 %{_includedir}/idn2.h
+%{_pkgconfigdir}/libidn2.pc
 %{_mandir}/man3/idn2_*.3*
 %{_gtkdocdir}/libidn2
 
