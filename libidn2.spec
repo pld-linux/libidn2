@@ -1,18 +1,18 @@
 Summary:	Free software implementation of IDNA2008
 Summary(pl.UTF-8):	Wolnodostępna implementacja IDNA2008
 Name:		libidn2
-Version:	2.0.2
+Version:	2.0.3
 Release:	1
 License:	LGPL v3+ or GPL v2+ (library), GPL v3+ (utilities)
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/libidn/%{name}-%{version}.tar.lz
-# Source0-md5:	5f982b0f6bdea58877e9de9fdd83c18e
+# Source0-md5:	86786da6ff5d5ffafdbf64ee86309a09
 Patch0:		%{name}-info.patch
 URL:		http://www.gnu.org/software/libidn/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	gettext-tools >= 0.19.3
-BuildRequires:	gtk-doc >= 1.1
+BuildRequires:	gtk-doc >= 1.14
 BuildRequires:	help2man
 BuildRequires:	libtool >= 2:2.0
 BuildRequires:	libunistring-devel
