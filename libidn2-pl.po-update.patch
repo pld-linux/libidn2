@@ -1,0 +1,17 @@
+--- libidn2-2.0.5/po/pl.po.orig	2018-06-09 09:42:23.319657214 +0200
++++ libidn2-2.0.5/po/pl.po	2018-06-09 09:42:25.832990518 +0200
+@@ -189,13 +189,12 @@
+ "      --no-tr46            Wyłączenie przetwarzania TR46\n"
+ 
+ #: src/idn2.c:94
+-#, fuzzy
+ msgid ""
+ "      --usestd3asciirules  Enable STD3 ASCII rules\n"
+ "      --debug              Print debugging information\n"
+ "      --quiet              Silent operation\n"
+ msgstr ""
+-"      --nostd3asciirules   Wyłączenie reguł STD3 ASCII\n"
++"      --usestd3asciirules  Włączenie reguł STD3 ASCII\n"
+ "      --debug              Wypisywanie informacji diagnostycznych\n"
+ "      --quiet              Działenie po cichu\n"
+ 
