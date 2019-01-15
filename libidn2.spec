@@ -1,12 +1,12 @@
 Summary:	Free software implementation of IDNA2008
 Summary(pl.UTF-8):	Wolnodostępna implementacja IDNA2008
 Name:		libidn2
-Version:	2.0.5
-Release:	2
+Version:	2.1.0
+Release:	1
 License:	LGPL v3+ or GPL v2+ (library), GPL v3+ (utilities)
 Group:		Libraries
 Source0:	http://ftp.gnu.org/gnu/libidn/%{name}-%{version}.tar.lz
-# Source0-md5:	dcc9a9f861e3f886f45382fddcf9df3f
+# Source0-md5:	2b5bee8c82b0855e443961f52daf5c75
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.gnu.org/software/libidn/
@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS COPYING ChangeLog NEWS README.md
 %attr(755,root,root) %{_bindir}/idn2
 %attr(755,root,root) %{_libdir}/libidn2.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libidn2.so.0
+%attr(755,root,root) %ghost %{_libdir}/libidn2.so.4
 %{_mandir}/man1/idn2.1*
 %{_infodir}/libidn2.info*
 
