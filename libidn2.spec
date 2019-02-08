@@ -1,3 +1,4 @@
+%bcond_with	tests
 Summary:	Free software implementation of IDNA2008
 Summary(pl.UTF-8):	Wolnodostępna implementacja IDNA2008
 Name:		libidn2
@@ -78,6 +79,8 @@ Statyczna biblioteka libidn2.
 	--with-html-dir=%{_gtkdocdir}
 
 %{__make}
+
+%{?with_tests:%{__make} check}
 
 %install
 rm -rf $RPM_BUILD_ROOT
