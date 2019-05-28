@@ -1,17 +1,71 @@
---- libidn2-2.0.5/po/pl.po.orig	2018-06-09 09:42:23.319657214 +0200
-+++ libidn2-2.0.5/po/pl.po	2018-06-09 09:42:25.832990518 +0200
-@@ -189,13 +189,12 @@
- "      --no-tr46            Wyłączenie przetwarzania TR46\n"
+--- libidn2-2.2.0/po/pl.po.orig	2019-05-28 17:32:22.859338044 +0200
++++ libidn2-2.2.0/po/pl.po	2019-05-28 17:36:10.051440572 +0200
+@@ -128,7 +128,7 @@
+ 
+ #: lib/error.c:80
+ msgid "Alabel roundtrip failed"
+-msgstr ""
++msgstr "Runda Alabel nie powiodła się"
+ 
+ #: lib/error.c:81
+ msgid "Unknown error"
+@@ -178,47 +178,44 @@
+ "krótkich.\n"
+ 
+ #: src/idn2.c:80
+-#, fuzzy
+ msgid ""
+ "  -h, --help                Print help and exit\n"
+ "  -V, --version             Print version and exit\n"
+ msgstr ""
+-"  -h, --help               Wypisanie opisu i zakończenie\n"
+-"  -V, --version            Wypisanie wersji i zakończenie\n"
++"  -h, --help                Wypisanie opisu i zakończenie\n"
++"  -V, --version             Wypisanie wersji i zakończenie\n"
+ 
+ #: src/idn2.c:84
+-#, fuzzy
+ msgid ""
+ "  -d, --decode              Decode (punycode) domain name\n"
+ "  -l, --lookup              Lookup domain name (default)\n"
+ "  -r, --register            Register label\n"
+ msgstr ""
+-"  -d, --decode             Zakodowanie (w punycode) nazwy domeny\n"
+-"  -l, --lookup             Wyszukanie nazwy domeny (domyślne)\n"
+-"  -r, --register           Zarejestrowanie etykiety\n"
++"  -d, --decode              Zdekodowanie nazwy domeny (z punycode)\n"
++"  -l, --lookup              Wyszukanie nazwy domeny (domyślne)\n"
++"  -r, --register            Zarejestrowanie etykiety\n"
+ 
+ #: src/idn2.c:89
+-#, fuzzy
+ msgid ""
+ "  -T, --tr46t               Enable TR46 transitional processing\n"
+ "  -N, --tr46nt              Enable TR46 non-transitional processing\n"
+ "      --no-tr46             Disable TR46 processing\n"
+ msgstr ""
+-"  -T, --tr46t              Włączenie przetwarzania przejściowego TR46\n"
+-"  -N, --tr46nt             Włączenie przetwarzania nieprzejściowego TR46\n"
+-"      --no-tr46            Wyłączenie przetwarzania TR46\n"
++"  -T, --tr46t               Włączenie przetwarzania przejściowego TR46\n"
++"  -N, --tr46nt              Włączenie przetwarzania nieprzejściowego TR46\n"
++"      --no-tr46             Wyłączenie przetwarzania TR46\n"
  
  #: src/idn2.c:94
 -#, fuzzy
  msgid ""
- "      --usestd3asciirules  Enable STD3 ASCII rules\n"
- "      --debug              Print debugging information\n"
- "      --quiet              Silent operation\n"
+ "      --usestd3asciirules   Enable STD3 ASCII rules\n"
+ "      --no-alabelroundtrip  Disable ALabel rountrip for lookups\n"
+ "      --debug               Print debugging information\n"
+ "      --quiet               Silent operation\n"
  msgstr ""
--"      --nostd3asciirules   Wyłączenie reguł STD3 ASCII\n"
-+"      --usestd3asciirules  Włączenie reguł STD3 ASCII\n"
- "      --debug              Wypisywanie informacji diagnostycznych\n"
- "      --quiet              Działenie po cichu\n"
+-"      --usestd3asciirules  Włączenie reguł STD3 ASCII\n"
+-"      --debug              Wypisywanie informacji diagnostycznych\n"
+-"      --quiet              Działanie po cichu\n"
++"      --usestd3asciirules   Włączenie reguł STD3 ASCII\n"
++"      --no-alabelroundtrip  Wyłączenie rundy ALabel przy wyszukiwaniu\n"
++"      --debug               Wypisywanie informacji diagnostycznych\n"
++"      --quiet               Działanie po cichu\n"
  
+ #: src/idn2.c:217
+ #, c-format
