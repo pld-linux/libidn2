@@ -1,5 +1,6 @@
 #
 # Conditional build:
+%bcond_without	apidocs	# API documentation
 %bcond_with	tests	# unit tests
 
 Summary:	Free software implementation of IDNA2008
@@ -17,7 +18,7 @@ URL:		http://www.gnu.org/software/libidn/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake >= 1:1.10
 BuildRequires:	gettext-tools >= 0.19.3
-BuildRequires:	gtk-doc >= 1.14
+%{?with_apidocs:BuildRequires:	gtk-doc >= 1.14}
 BuildRequires:	help2man
 BuildRequires:	libtool >= 2:2.0
 BuildRequires:	libunistring-devel
@@ -63,6 +64,19 @@ Static libidn2 library.
 %description static -l pl.UTF-8
 Statyczna biblioteka libidn2.
 
+%package apidocs
+Summary:	libidn2 API documentation
+Summary(pl.UTF-8):	Dokumentacja API libidb2
+Group:		Documentation
+Requires:	gtk-doc-common
+BuildArch:	noarch
+
+%description apidocs
+libblkid API documentation.
+
+%description apidocs -l pl.UTF-8
+Dokumentacja API libblkid.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -79,6 +93,7 @@ Statyczna biblioteka libidn2.
 %{__automake}
 %configure \
 	--disable-silent-rules \
+	%{?with_apidocs:--enable-gtk-doc} \
 	--with-html-dir=%{_gtkdocdir}
 
 %{__make}
@@ -90,6 +105,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%if !%{with apidocs}
+%{__rm} -r $RPM_BUILD_ROOT%{_gtkdocdir}/libidn2
+%endif
 
 %find_lang %{name}
 
@@ -120,8 +139,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/idn2.h
 %{_pkgconfigdir}/libidn2.pc
 %{_mandir}/man3/idn2_*.3*
-%{_gtkdocdir}/libidn2
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libidn2.a
+
+%if %{with apidocs}
+%files apidocs
+%defattr(644,root,root,755)
+%{_gtkdocdir}/libidn2
+%endif
