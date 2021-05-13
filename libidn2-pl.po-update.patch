@@ -1,9 +1,9 @@
---- libidn2-2.2.0/po/pl.po.orig	2019-05-28 17:32:22.859338044 +0200
-+++ libidn2-2.2.0/po/pl.po	2019-05-28 17:36:10.051440572 +0200
+--- libidn2-2.3.1/po/pl.po.orig	2021-05-12 17:43:39.000000000 +0000
++++ libidn2-2.3.1/po/pl.po	2021-05-13 19:19:39.430005218 +0000
 @@ -128,7 +128,7 @@
  
  #: lib/error.c:80
- msgid "Alabel roundtrip failed"
+ msgid "A-label roundtrip failed"
 -msgstr ""
 +msgstr "Runda Alabel nie powiodła się"
  
@@ -33,7 +33,7 @@
 -"  -d, --decode             Zakodowanie (w punycode) nazwy domeny\n"
 -"  -l, --lookup             Wyszukanie nazwy domeny (domyślne)\n"
 -"  -r, --register           Zarejestrowanie etykiety\n"
-+"  -d, --decode              Zdekodowanie nazwy domeny (z punycode)\n"
++"  -d, --decode              Zakodowanie (w punycode) nazwy domeny\n"
 +"  -l, --lookup              Wyszukanie nazwy domeny (domyślne)\n"
 +"  -r, --register            Zarejestrowanie etykiety\n"
  
@@ -55,7 +55,7 @@
 -#, fuzzy
  msgid ""
  "      --usestd3asciirules   Enable STD3 ASCII rules\n"
- "      --no-alabelroundtrip  Disable ALabel rountrip for lookups\n"
+ "      --no-alabelroundtrip  Disable A-label roundtrip for lookups\n"
  "      --debug               Print debugging information\n"
  "      --quiet               Silent operation\n"
  msgstr ""
