@@ -10,19 +10,19 @@ Version:	2.3.1
 Release:	1
 License:	LGPL v3+ or GPL v2+ (library), GPL v3+ (utilities)
 Group:		Libraries
-Source0:	http://ftp.gnu.org/gnu/libidn/%{name}-%{version}.tar.gz
+Source0:	https://ftp.gnu.org/gnu/libidn/%{name}-%{version}.tar.gz
 # Source0-md5:	cda07f5ac55fccfafdf7ee01828adad5
 Patch0:		%{name}-info.patch
 Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.gnu.org/software/libidn/
 BuildRequires:	autoconf >= 2.61
-BuildRequires:	automake >= 1:1.10
+BuildRequires:	automake >= 1:1.13
 BuildRequires:	gettext-tools >= 0.19.3
 %{?with_apidocs:BuildRequires:	gtk-doc >= 1.14}
 BuildRequires:	help2man
 BuildRequires:	libtool >= 2:2.0
 BuildRequires:	libunistring-devel
-BuildRequires:	lzip
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.98
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo >= 4.7
@@ -66,16 +66,16 @@ Statyczna biblioteka libidn2.
 
 %package apidocs
 Summary:	libidn2 API documentation
-Summary(pl.UTF-8):	Dokumentacja API libidb2
+Summary(pl.UTF-8):	Dokumentacja API biblioteki libidb2
 Group:		Documentation
 Requires:	gtk-doc-common
 BuildArch:	noarch
 
 %description apidocs
-libblkid API documentation.
+libidn2 API documentation.
 
 %description apidocs -l pl.UTF-8
-Dokumentacja API libblkid.
+Dokumentacja API biblioteki libidn2.
 
 %prep
 %setup -q
