@@ -69,6 +69,7 @@ Summary:	libidn2 API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki libidb2
 Group:		Documentation
 Requires:	gtk-doc-common
+Conflicts:	libidn2-devel < 2.3.1
 BuildArch:	noarch
 
 %description apidocs
