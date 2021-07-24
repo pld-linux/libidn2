@@ -17,7 +17,7 @@ Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.gnu.org/software/libidn/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake >= 1:1.13
-BuildRequires:	gettext-tools >= 0.19.3
+BuildRequires:	gettext-tools >= 0.21
 %{?with_apidocs:BuildRequires:	gtk-doc >= 1.14}
 BuildRequires:	help2man
 BuildRequires:	libtool >= 2:2.0
