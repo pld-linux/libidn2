@@ -13,7 +13,6 @@ Group:		Libraries
 Source0:	https://ftp.gnu.org/gnu/libidn/%{name}-%{version}.tar.gz
 # Source0-md5:	fb54962eb68cf22d47a4ae61f0aba993
 Patch0:		%{name}-info.patch
-Patch1:		%{name}-pl.po-update.patch
 URL:		http://www.gnu.org/software/libidn/
 BuildRequires:	autoconf >= 2.61
 BuildRequires:	automake >= 1:1.13
@@ -81,7 +80,6 @@ Dokumentacja API biblioteki libidn2.
 %prep
 %setup -q
 %patch0 -p1
-#%patch1 -p1
 
 %{__rm} po/stamp-po
 
