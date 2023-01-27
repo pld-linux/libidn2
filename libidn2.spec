@@ -7,7 +7,7 @@ Summary:	Free software implementation of IDNA2008
 Summary(pl.UTF-8):	Wolnodostępna implementacja IDNA2008
 Name:		libidn2
 Version:	2.3.4
-Release:	1
+Release:	2
 License:	LGPL v3+ or GPL v2+ (library), GPL v3+ (utilities)
 Group:		Libraries
 Source0:	https://ftp.gnu.org/gnu/libidn/%{name}-%{version}.tar.gz
