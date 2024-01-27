@@ -1,7 +1,8 @@
 #
 # Conditional build:
-%bcond_without	apidocs	# API documentation
-%bcond_with	tests	# unit tests
+%bcond_without	apidocs		# API documentation
+%bcond_without	static_libs	# static library
+%bcond_with	tests		# unit tests
 
 Summary:	Free software implementation of IDNA2008
 Summary(pl.UTF-8):	Wolnodostępna implementacja IDNA2008
@@ -22,7 +23,7 @@ BuildRequires:	help2man
 BuildRequires:	libtool >= 2:2.0
 BuildRequires:	libunistring-devel
 BuildRequires:	rpm-build >= 4.6
-BuildRequires:	rpmbuild(macros) >= 1.98
+BuildRequires:	rpmbuild(macros) >= 1.527
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo >= 4.7
 Requires(post,postun):	/sbin/ldconfig
@@ -92,6 +93,7 @@ Dokumentacja API biblioteki libidn2.
 %{__automake}
 %configure \
 	--disable-silent-rules \
+	%{__enable_disable static_libs static} \
 	%{?with_apidocs:--enable-gtk-doc} \
 	--with-html-dir=%{_gtkdocdir}
 
@@ -139,9 +141,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/libidn2.pc
 %{_mandir}/man3/idn2_*.3*
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libidn2.a
+%endif
 
 %if %{with apidocs}
 %files apidocs
