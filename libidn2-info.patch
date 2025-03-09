@@ -1,7 +1,7 @@
 --- libidn2-2.0.2/doc/libidn2.texi.orig	2017-04-24 16:48:19.000000000 +0200
 +++ libidn2-2.0.2/doc/libidn2.texi	2017-05-18 18:45:37.937167065 +0200
 @@ -16,14 +16,14 @@
- Copyright @copyright{} 2011--2024 Simon Josefsson
+ Copyright @copyright{} 2011--2025 Simon Josefsson
  @end copying
  
 -@dircategory Software libraries
