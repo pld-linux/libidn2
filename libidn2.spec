@@ -42,8 +42,8 @@ Summary:	Header files for libidn2 library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libidn2
 License:	LGPL v2.1+
 Group:		Development/Libraries
-Requires:	%{name} = %{version}-%{release}
-Requires:	libunistring-devel
+Requires:	%{name}%{?_isa} = %{version}-%{release}
+Requires:	libunistring-devel%{?_isa}
 
 %description devel
 Header files for libidn2 library.
@@ -56,7 +56,7 @@ Summary:	Static libidn2 library
 Summary(pl.UTF-8):	Statyczna biblioteka libidn2
 License:	LGPL v2.1+
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel%{?_isa} = %{version}-%{release}
 
 %description static
 Static libidn2 library.
